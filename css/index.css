@@ -118,3 +118,29 @@ body {
     margin-bottom: 80px;
     border: 3px groove #99ff99;
 }
+
+.dancing-michael-1 {
+    display: block;
+    left: 0;
+    position: fixed;
+    height: auto;
+    width: auto;
+    max-height: 400px;
+    max-width: 300px;
+    margin-left: 190px;
+    margin-bottom: 60px;
+    bottom: 0;
+}
+
+.dancing-michael-2 {
+    display: block;
+    right: 0;
+    position: fixed;
+    height: auto;
+    width: auto;
+    max-height: 400px;
+    max-width: 300px;
+    margin-right: 190px;
+    margin-bottom: 60px;
+    bottom: 0;
+}
