@@ -12,4 +12,4 @@ No one said I was good at this, You may need to zoom out significantly if you're
 View on https://oribuin.xyz/dbd/
 
 ## Can I modify this?
-Sure, I don't mind, Take whatrever you want. tis just a fun project to work on.
+Sure, I don't mind, Take whatever you want. tis just a fun project to work on, Use the source code as much as you like.
