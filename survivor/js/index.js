@@ -112,7 +112,6 @@ function selectRandomSurvivor() {
     lastKiller.name = newSurvivor.name
 
     let element = document.getElementById("random-character")
-    console.log(element)
     // refreshEle.innerText = `${capitalizeFully(newSurvivor.name.replace('_', ' '))} (Refresh)`
 
     let iconEle = document.getElementById("image")
