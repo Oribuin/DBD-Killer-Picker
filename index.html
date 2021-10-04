@@ -2,53 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DBD Killer Picker</title>
+    <title>DBD Pickerr</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Dead By Daylight Killer Picker">
+    <meta property="og:title" content="Dead By Daylight Character Picker">
     <meta property="og:description"
-          content="Choose a random killer out of your available killers to play in your next round.">
-    <script type="text/javascript" src="./js/index.js"></script>
+          content="Select the role you're playing then have a random character picked out for you to play!">
 </head>
 <body>
 
 <!-- This is where you can toggle the available killers you have -->
 <div class="top-bar">
-    <header class="top-bar-header">Dead By Daylight Killer Picker</header>
-    <div class="top-bar-desc">Select your available killers and choose a random one to play.</div>
-</div>
-
-<!-- Clearly the most important part of this-->
-<img class="dancing-michael-left" id="dancing-michael-left" src="./gif/myers2.gif" alt="Dancing Michael 1">
-<img class="dancing-michael-right" id="dancing-michael-right" src="./gif/myers2.gif" alt="Dancing Michael 2">
-
-<!-- The button for selecting a new random killer-->
-<!-- This will also double down as the killer's name-->
-<div class="random-killer" id="random-killer" onClick="selectRandomKiller()">
-    Trapper (Refresh)
-</div>
-
-<!-- The icon for the selected killer-->
-<div class="killer-icon" id="killer-icon">
-    <img id="killer-image" src="./img/trapper.png" alt="trapper-image">
-</div>
-
-<!-- Legal shit bar-->
-<div class="legal-bar" onclick="toggleMichael()" title="Click to see a dancing michael">
-    Not affiliated with Dead By Daylight or BHVR Interactive
-</div>
-
-<!-- Left Sidebar Options -->
-<div id="sidebar-left" class="sidebar" style="left: 0; border-right: 3px solid dodgerblue">
-    <!-- Toggle all killers on -->
-    <label class="toggle-all" onClick="toggleAll(true)">Toggle All On</label>
-</div>
-
-<!-- Right Sidebar Options-->
-<div id="sidebar-right" class="sidebar" style="right: 0; border-left: 3px solid dodgerblue">
-    <!-- Toggle all killers off-->
-    <label class="toggle-all" onClick="toggleAll(false)">Toggle All Off</label>
+    <header class="top-bar-header">Dead By Daylight Picker</header>
+    <div class="top-bar-desc">Select the role you're playing then have a random character picked out for you to play!</div>
 </div>
 
 </body>
