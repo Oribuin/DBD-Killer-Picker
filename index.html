@@ -20,8 +20,8 @@
 </div>
 
 <!-- Clearly the most important part of this-->
-<img class="dancing-michael-1" src="./gif/myers2.gif" alt="Dancing Michael 1">
-<img class="dancing-michael-2" src="./gif/myers2.gif" alt="Dancing Michael 2">
+<img class="dancing-michael-left" id="dancing-michael-left" src="./gif/myers2.gif" alt="Dancing Michael 1">
+<img class="dancing-michael-right" id="dancing-michael-right" src="./gif/myers2.gif" alt="Dancing Michael 2">
 
 <!-- The button for selecting a new random killer-->
 <!-- This will also double down as the killer's name-->
@@ -35,7 +35,7 @@
 </div>
 
 <!-- Legal shit bar-->
-<div class="legal-bar">
+<div class="legal-bar" onclick="toggleMichael()" title="Click to see a dancing michael">
     Not affiliated with Dead By Daylight or BHVR Interactive
 </div>
 
@@ -43,42 +43,12 @@
 <div id="sidebar-left" class="sidebar" style="left: 0; border-right: 3px solid dodgerblue">
     <!-- Toggle all killers on -->
     <label class="toggle-all" onClick="toggleAll(true)">Toggle All On</label>
-
-    <!--    Killers 1-12-->
-    <label id='TRAPPER' onClick='toggleKiller("TRAPPER")'>Trapper</label>
-    <label id='WRAITH' onClick='toggleKiller("WRAITH")'>Wraith</label>
-    <label id='HILLBILLY' onClick='toggleKiller("HILLBILLY")'>Hillbilly</label>
-    <label id='NURSE' onClick='toggleKiller("NURSE")'>Nurse</label>
-    <label id='SHAPE' onClick='toggleKiller("SHAPE")'>Shape</label>
-    <label id='HAG' onClick='toggleKiller("HAG")'>Hag</label>
-    <label id='DOCTOR' onClick='toggleKiller("DOCTOR")'>Doctor</label>
-    <label id='HUNTRESS' onClick='toggleKiller("HUNTRESS")'>Huntress</label>
-    <label id='CANNIBAL' onClick='toggleKiller("CANNIBAL")'>Cannibal</label>
-    <label id='NIGHTMARE' onClick='toggleKiller("NIGHTMARE")'>Nightmare</label>
-    <label id='PIG' onClick='toggleKiller("PIG")'>Pig</label>
-    <label id='CLOWN' title="Why would you ever play this?" onClick='toggleKiller("CLOWN")' class="killer-disabled">Clown</label>
 </div>
 
 <!-- Right Sidebar Options-->
 <div id="sidebar-right" class="sidebar" style="right: 0; border-left: 3px solid dodgerblue">
-
     <!-- Toggle all killers off-->
     <label class="toggle-all" onClick="toggleAll(false)">Toggle All Off</label>
-
-    <!--    Killers 13-14-->
-    <label id='SPIRIT' onClick='toggleKiller("SPIRIT")'>Spirit</label>
-    <label id='LEGION' onClick='toggleKiller("LEGION")'>Legion</label>
-    <label id='GHOST_FACE' onClick='toggleKiller("GHOST_FACE")'>Ghost Face</label>
-    <label id='DEMOGORGON' onClick='toggleKiller("DEMOGORGON")'>Demogorgon</label>
-    <label id='ONI' onClick='toggleKiller("ONI")'>Oni</label>
-    <label id='DEATHSLINGER' onClick='toggleKiller("DEATHSLINGER")'>Deathslinger</label>
-    <label id='PYRAMID_HEAD' onClick='toggleKiller("PYRAMID_HEAD")'>Pyramid Head</label>
-    <label id='BLIGHT' onClick='toggleKiller("BLIGHT")'>Blight</label>
-    <label id='TWINS' onClick='toggleKiller("TWINS")'>Twins</label>
-    <label id='TRICKSTER' onClick='toggleKiller("TRICKSTER")'>Trickster</label>
-    <label id='NEMESIS' onClick='toggleKiller("NEMESIS")'>Nemesis</label>
-    <label id='CENOBITE' onClick='toggleKiller("CENOBITE")'>Cenobite</label>
-
 </div>
 
 </body>

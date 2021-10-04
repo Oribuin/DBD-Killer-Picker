@@ -12,6 +12,9 @@ consoleMessage.forEach(value => console.log(value))
 // So someone doesn't get the same killer twice
 let lastKiller = {name: "UNKNOWN", enabled: true}
 
+// Should you have a beautiful michael myers dancing.
+let dancingMichael = false
+
 // Set all the killer values, Yes this is awful, I'm aware but i do not care anymore, this language sucks
 let killers = [
     {name: "TRAPPER", enabled: true},
@@ -37,8 +40,25 @@ let killers = [
     {name: "TWINS", enabled: true},
     {name: "TRICKSTER", enabled: true},
     {name: "NEMESIS", enabled: true},
-    {name: "CENOBITE", enabled: true}
+    {name: "CENOBITE", enabled: true},
 ]
+
+// Instead of manually adding all the killers into the sidebars, We add them on a JavaScript level for pure convenience
+// then we split all the killers in half and add them equally.
+setTimeout(() => {
+    let killersDivided = killers.length / 2
+
+    // Get the first half of the killers
+    let leftKillers = killers.slice(0, killersDivided)
+    // Get the rest of the killers
+    let rightKillers = killers.slice(killersDivided, killers.length)
+
+    // Add the first half of the killers to the left sidebar.
+    leftKillers.forEach(killer => addKillerToElement(killer, "sidebar-left"))
+    // Add second half of the killers to the right sidebar
+    rightKillers.forEach(killer => addKillerToElement(killer, "sidebar-right"))
+
+}, 1)
 
 /**
  * Toggle all of the killers on or off.
@@ -65,7 +85,6 @@ function toggleAll(enabled) {
  * @param name The name of the killer
  */
 function toggleKiller(name) {
-
     let killer = killers.find(value => value.name === name)
     killer.enabled = !killer.enabled
 
@@ -97,13 +116,15 @@ Array.prototype.random = function () {
     return this[Math.floor((Math.random() * this.length))]
 }
 
-// Temp functions because I was lazy and didnt wanna type out all the labels
-// function logKillers() {
-//     killers.map(value => "<label id='" + value.name + "' onClick='toggleKiller(\"" + value.name + "\")'>" + capitalizeFully(value.name) + "</label>").forEach(value => console.log(value));
-// }
 
+/**
+ * Format a string in the way I want for extra styling.
+ *
+ * @param text The text being capitalize & formatted.
+ * @returns {string}
+ */
 function capitalizeFully(text) {
-    const textSplit = text.toLowerCase().split(' ')
+    const textSplit = text.replace('_', ' ').toLowerCase().split(' ')
     let builder = ""
 
     textSplit.forEach(value => {
@@ -112,4 +133,43 @@ function capitalizeFully(text) {
     })
 
     return builder
+}
+
+/**
+ * Add a killer's name to an element based on ID
+ *
+ * @param killer The killer object
+ * @param elementName The name of the element.
+ */
+function addKillerToElement(killer, elementName) {
+    let label = "<label id='" + killer.name + "' onclick='toggleKiller(\"" + killer.name + "\")'>" + capitalizeFully(killer.name) + "</label>"
+
+    let element = document.getElementById(elementName)
+    element.innerHTML += label;
+
+    // Some anti clown mechanics
+    if (!killer.enabled) {
+        document.getElementById(killer.name).classList.toggle("killer-disabled")
+    }
+
+    // Some more anti clown mechanics
+    if (killer.name === "CLOWN") {
+        document.getElementById(killer.name).setAttribute("title", "Why would you play this")
+    }
+
+}
+
+/**
+ * Why wouldn't you want to see a dancing michael on your screen
+ */
+function toggleMichael() {
+
+    let leftMyers = document.getElementById("dancing-michael-left")
+    let rightMyers = document.getElementById("dancing-michael-right")
+
+    dancingMichael = !dancingMichael
+    let visibility = dancingMichael ? "visible" : "hidden";
+
+    leftMyers.style.visibility = visibility
+    rightMyers.style.visibility = visibility
 }

@@ -83,6 +83,7 @@ body {
     padding: 20px;
     border-top: 3px solid dodgerblue;
     text-align: center;
+    cursor: pointer;
 }
 
 .random-killer {
@@ -119,7 +120,7 @@ body {
     border: 3px groove #99ff99;
 }
 
-.dancing-michael-1 {
+.dancing-michael-left {
     display: block;
     left: 0;
     position: fixed;
@@ -130,9 +131,10 @@ body {
     margin-left: 190px;
     margin-bottom: 60px;
     bottom: 0;
+    visibility: hidden;
 }
 
-.dancing-michael-2 {
+.dancing-michael-right {
     display: block;
     right: 0;
     position: fixed;
@@ -143,4 +145,5 @@ body {
     margin-right: 190px;
     margin-bottom: 60px;
     bottom: 0;
+    visibility: hidden;
 }
