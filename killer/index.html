@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DBD Killer Picker</title>
+    <link rel="stylesheet" href="../picker.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dead By Daylight Killer Picker">
+    <meta property="og:description"
+          content="Choose a random killer out of your available killers to play in your next round.">
+    <script type="text/javascript" src="./js/index.js"></script>
+</head>
+<body>
+
+<!-- This is where you can toggle the available killers you have -->
+<div class="top-bar">
+    <header class="top-bar-header">Dead By Daylight Killer Picker</header>
+    <a class="top-bar-desc" href="../">
+        Select your available killers and choose a random one to play.
+        <br>
+        Click here to go back.
+    </a>
+</div>
+
+<!-- Clearly the most important part of this-->
+<img class="dancing-michael-left" id="dancing-michael-left" src="../img/myers2.gif" alt="Dancing Michael 1">
+<img class="dancing-michael-right" id="dancing-michael-right" src="../img/myers2.gif" alt="Dancing Michael 2">
+
+<!-- The button for selecting a new random killer-->
+<!-- This will also double down as the killer's name-->
+<div class="random-character" id="random-character" onClick="selectRandomKiller()">
+    Trapper (Refresh)
+</div>
+
+<!-- The icon for the selected killer-->
+<div class="icon" id="icon">
+    <img id="image" src="./img/trapper.png" alt="Trapper Image">
+</div>
+
+<!-- Legal shit bar-->
+<div class="legal-bar" onclick="toggleMichael()" title="Click to see a dancing michael">
+    Not affiliated with Dead By Daylight or BHVR Interactive
+</div>
+
+<!-- Left Sidebar Options -->
+<div id="sidebar-left" class="sidebar" style="left: 0; border-right: 3px solid dodgerblue">
+    <!-- Toggle all killers on -->
+    <label class="toggle-all" onClick="toggleAll(true)">Toggle All On</label>
+</div>
+
+<!-- Right Sidebar Options-->
+<div id="sidebar-right" class="sidebar" style="right: 0; border-left: 3px solid dodgerblue">
+    <!-- Toggle all killers off-->
+    <label class="toggle-all" onClick="toggleAll(false)">Toggle All Off</label>
+</div>
+
+</body>
+</html>
