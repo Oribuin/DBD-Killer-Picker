@@ -1,8 +1,12 @@
 # Dead By Daylight Character Picker
-The Dead By Daylight killer picker is used to give people a random killer to play out of a list of chosen killers. Generally just used for myself but I decided to make it public and open source.
+The Dead By Daylight Picker allows users to select their desired role, Choosing between killer or survivor.
+<br><br>
+You can then choose which survivors you own or don't own to let the website give you characters you own. Press the refresh button and it will give you a random character for you to play.
+<br><br>
+This is great for users who are indecisive such as myself
 
-## Is there a survivor version?
-Coming soon, Will likely turn into a seperate branch.
+## Why do the images overlap each other
+No one said I was good at this, You may need to zoom out significantly if you're on a smaller screen.
 
 ## How can I see the website?
 View on https://oribuin.xyz/dbd/
